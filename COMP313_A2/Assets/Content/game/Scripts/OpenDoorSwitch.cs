@@ -5,7 +5,7 @@ using Unity.InteractiveTutorials;
 
 public class OpenDoorSwitch : MonoBehaviour
 {
-    public Door door;
+    public Door[] doors;
     public float delayInSeconds;
 
     void OnTriggerEnter(Collider collider)
@@ -20,7 +20,11 @@ public class OpenDoorSwitch : MonoBehaviour
     private IEnumerator Animate()
     {
         yield return new WaitForSeconds(delayInSeconds);
-
-        door.Open();
+		
+		for(int i = 0; i < doors.Length; i++){
+			doors[i].Open();
+		}
+		
+//        door.Open();
     }
 }
