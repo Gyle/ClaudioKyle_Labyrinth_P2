@@ -92,7 +92,20 @@ public class DoorTrigger : MonoBehaviour {
 			}
 			//on button press do this stuff
 			if (delay == 0) {
-				if (Input.GetKey (openButton)) {
+//				if (Input.GetKey (openButton)) {
+				// 0  means primary mouse button
+				if (Input.GetMouseButtonDown(0)) {
+					
+					// these variable stores where the user clicked
+					RaycastHit mouse;
+					Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+					
+					if(Physics.Raycast(ray, out mouse, 100.0f)){
+						if(mouse.transform != null){
+							print(mouse.transform.gameObject);
+						}
+					}
+					
 					if (UI != null)
 					{
 						UI.SetActive (false);
