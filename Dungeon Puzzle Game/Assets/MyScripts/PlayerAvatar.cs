@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameObjectClicker : MonoBehaviour {
+public class PlayerAvatar : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
