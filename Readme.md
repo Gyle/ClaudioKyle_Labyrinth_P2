@@ -1,5 +1,5 @@
-# 18.2 COMP313 Assignment 1
-## Student: Steve Minecraft
+# 18.2 COMP313 Assignment 2
+## Student: Kyle Claudio, Lucas Gosling
 
 ## Goal Oriented Action Planning
 
@@ -17,7 +17,7 @@ This should be a section describing the various ways to set parameters or option
 
 ## Sources
 
-**Terms**: <"Goal Oriented Action Planning">;<GOAP tutorial Unity>
+**Clicking on Game Objects**: https://www.youtube.com/watch?v=EANtTI6BCxk
 
 **Explanation**: [MIT Media Lab on GOAP](http://alumni.media.mit.edu/~jorkin/goap.html)
 
