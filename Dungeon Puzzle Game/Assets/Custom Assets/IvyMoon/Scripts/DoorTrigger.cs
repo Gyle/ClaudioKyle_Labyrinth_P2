@@ -14,7 +14,10 @@ public class DoorTrigger : MonoBehaviour {
 	string useMessage = "Use ";
 	public string openButton = "v"; //choose a keycode we would like for opening the door
 	public string closeButton = "c";//choose a keycode we would like for closing the door
-
+	
+	// This variable represents which switch they are in range of using
+	GameObject vicinitySwitch;
+	
 	float openState;
 	float state;
 	float UIDelay;
@@ -31,6 +34,7 @@ public class DoorTrigger : MonoBehaviour {
 			for(int i = 0; i < gameObject.GetComponent<Door>().activateTargets.Length; i++){
 				if (gameObject.GetComponent<Door>().activateTargets[i] != null) {
 					if (Vector3.Distance (gameObject.GetComponent<Door>().activateTargets[i].transform.position, gameObject.GetComponent<Door>().player.transform.position) <= gameObject.GetComponent<Door>().openRange) {
+						vicinitySwitch = gameObject.GetComponent<Door>().activateTargets[i];
 						state = 1;
 						break;
 
@@ -92,23 +96,50 @@ public class DoorTrigger : MonoBehaviour {
 			}
 			//on button press do this stuff
 			if (delay == 0) {
-				if (Input.GetKey (openButton)) {
+//				if (Input.GetKey (openButton)) {
+				// 0  means primary mouse button
+				if (Input.GetMouseButtonDown(0)) {
+					// boolean to notify program to only open/close door if this is true
+					// in order for this to be true, the player must be in range of the
+					// switch that they clicked on
+					bool correctInteraction = false;
+						
+					// these variable stores where the user clicked
+					RaycastHit mouse;
+					Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+					
+					if(Physics.Raycast(ray, out mouse, 100.0f)){
+						if(mouse.transform != null){
+							print(mouse.transform.gameObject);
+							
+							// check if the user clicked on the switch they are close to
+							if(mouse.transform.gameObject == vicinitySwitch){
+								print("in vicinity");
+								correctInteraction = true;
+							}
+						}
+					}
+					
 					if (UI != null)
 					{
 						UI.SetActive (false);
 					}
-					if (oneButton == true)
-					{
-						if (openState == 0) {
-							gameObject.GetComponent<Door>().triggerOpen = true;
-							openState = 1;
+					
+					// check if player within the rules of using switches before taking actions.
+					if(correctInteraction){
+						if (oneButton == true)
+						{
+							if (openState == 0) {
+								gameObject.GetComponent<Door>().triggerOpen = true;
+								openState = 1;
+							}
+							if (openState == 2) {
+								gameObject.GetComponent<Door>().triggerClose = true;
+								openState = 0;
+							}
+						} else {
+							gameObject.GetComponent<Door> ().triggerOpen = true;
 						}
-						if (openState == 2) {
-							gameObject.GetComponent<Door>().triggerClose = true;
-							openState = 0;
-						}
-					} else {
-						gameObject.GetComponent<Door> ().triggerOpen = true;
 					}
 					timer = Time.time + .4f;
 					UITimer = Time.time + 1.2f;
