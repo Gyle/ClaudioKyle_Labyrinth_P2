@@ -4,5 +4,7 @@
 ## Burndown Chart
 http://radekstepan.com/burnchart/#!/
 
-To show, Log into GitHub and put in the path to this Repo.
-EG: Gyle/COMP313_Unity_Game
+To show: 
+1) Log into GitHub and put in the path to this Repo.
+2) Select add project on top left
+3) enter path. EG: Gyle/COMP313_Unity_Game
