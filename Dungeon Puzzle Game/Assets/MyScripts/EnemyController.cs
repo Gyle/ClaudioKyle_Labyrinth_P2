@@ -6,24 +6,30 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour {
 
     
+    public GameObject[] waypoints;      // patrol waypoints for enemy
     public NavMeshAgent agent;  // This object controls the movement
-    public float speed;         // How fast the enemy can walk
-    public float initialWaitTime;   // How long the enemy will wait at random spot
-    private float currentWaitTime;    // How long the enemy has been waiting
+    public float initialWaitTime;       // How long the enemy will wait at waypoint
+
+    private float currentWaitTime;      // How long the enemy has been waiting
+    private int index;          // current waypoint index
+    private GameObject wp;      // current waypoint game object
 
     // Use this for initialization
     void Start () {
+        index = 0;
+        wp = waypoints[index++];
         currentWaitTime = initialWaitTime;
     }
 	
 	// Update is called once per frame
 	void Update () {
         // If it is time to move, move enemy
-		if (currentWaitTime <= 0)
+        if (currentWaitTime <= 0)
         {
-            Vector3 randomSpot = Generate_Random_Position();
-            agent.SetDestination(randomSpot);   // Move enemy to random location
-            currentWaitTime = initialWaitTime;  // Reset timer
+            agent.SetDestination(wp.transform.position);    // Move enemy to next location
+            currentWaitTime = initialWaitTime;              // Reset timer
+            Update_Next_Waypoint();                         // update next waypoint
+            
         }
         // It is not time to move so decrement timer
         else
@@ -32,12 +38,14 @@ public class EnemyController : MonoBehaviour {
         }
 	}
 
-    Vector3 Generate_Random_Position()
+    void Update_Next_Waypoint()
     {
-        float x = Random.Range(-10, 10);
-        float y = 1.210377f;
-        float z = Random.Range(-10, 10);
-        return new Vector3(x, y, z);
+        if (index >= waypoints.Length)
+        {
+            index = 0;
+        }
+
+        wp = waypoints[index++];
     }
 
 }
