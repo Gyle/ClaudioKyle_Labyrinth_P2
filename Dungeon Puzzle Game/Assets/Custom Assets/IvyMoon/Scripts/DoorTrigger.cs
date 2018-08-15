@@ -17,6 +17,8 @@ public class DoorTrigger : MonoBehaviour {
 	
 	// This variable represents which switch they are in range of using
 	GameObject vicinitySwitch;
+    // debug boolean
+    bool debugMode = false;
 	
 	float openState;
 	float state;
@@ -30,6 +32,12 @@ public class DoorTrigger : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+        // enter debug mode, which opens all doors at the moment.
+        if (Input.GetMouseButtonDown(1))
+        {
+            debugMode = !debugMode;
+            Debug.Log("DebugMode Toggle: " + debugMode);
+        }
 		if (useOpenRange == true) {
 			for(int i = 0; i < gameObject.GetComponent<Door>().activateTargets.Length; i++){
 				if (gameObject.GetComponent<Door>().activateTargets[i] != null) {
@@ -61,7 +69,8 @@ public class DoorTrigger : MonoBehaviour {
 
 		}
 
-		if (state == 1)
+        // begin door logic if in range of trigger or Debug mdoe is on
+        if (state == 1 || debugMode)
 		{
 			if (UI != null)
 			{
@@ -94,6 +103,7 @@ public class DoorTrigger : MonoBehaviour {
 				}
 
 			}
+
 			//on button press do this stuff
 			if (delay == 0) {
 //				if (Input.GetKey (openButton)) {
@@ -113,20 +123,19 @@ public class DoorTrigger : MonoBehaviour {
 							print(mouse.transform.gameObject);
 							
 							// check if the user clicked on the switch they are close to
-							if(mouse.transform.gameObject == vicinitySwitch){
-								print("in vicinity");
+                            if(mouse.transform.gameObject == vicinitySwitch){
+                                print("player in vicinity");
 								correctInteraction = true;
 							}
 						}
 					}
-					
 					if (UI != null)
 					{
 						UI.SetActive (false);
 					}
-					
+
 					// check if player within the rules of using switches before taking actions.
-					if(correctInteraction){
+                    if(correctInteraction || debugMode){
 						if (oneButton == true)
 						{
 							if (openState == 0) {
