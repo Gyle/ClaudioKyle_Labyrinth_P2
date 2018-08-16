@@ -8,3 +8,6 @@ To show:
 1) Log into GitHub and put in the path to this Repo.
 2) Select add project on top left
 3) enter path. EG: Gyle/COMP313_Unity_Game
+
+## Debugging
+Currently Right click is Debug Mode. In this mode, right click opens and closes all doors.
