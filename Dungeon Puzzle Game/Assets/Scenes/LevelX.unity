@@ -7569,6 +7569,7 @@ MonoBehaviour:
   - {fileID: 354642415}
   - {fileID: 1615583799}
   agent: {fileID: 2126342657}
+  player: {fileID: 904990844}
   initialWaitTime: 5
 --- !u!195 &2126342657
 NavMeshAgent:
@@ -7604,6 +7605,19 @@ CapsuleCollider:
   m_Height: 2.38287
   m_Direction: 1
   m_Center: {x: 0, y: 0.691435, z: 0}
+--- !u!136 &2126342661
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2126342655}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 4
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &2129254424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4246702358717250, guid: 37794f550c88a4906a75a7d9feda967a,
