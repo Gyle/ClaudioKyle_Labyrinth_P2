@@ -10,4 +10,4 @@ To show:
 3) enter path. EG: Gyle/COMP313_Unity_Game
 
 ## Debugging
-Currently Right click is Debug Mode. In this mode, right click opens and closes all doors.
+Currently Right click is Debug Mode. In this mode, left click opens and closes all doors.
