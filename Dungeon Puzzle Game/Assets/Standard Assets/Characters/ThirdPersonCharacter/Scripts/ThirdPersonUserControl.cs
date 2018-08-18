@@ -13,8 +13,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
         private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
 
 
+        private bool dead; // reference for if player is dead or alive
+
+
         private void Start()
         {
+            // player is alive when game starts
+            dead = false;
+
             // get the transform of the main camera
             if (Camera.main != null)
             {
@@ -33,7 +39,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 
         // Fixed update is called in sync with physics
         private void FixedUpdate()
-        {
+        {   
+            // do not let player move if died
+            if (dead)
+            {
+                // set vector for standing still
+                m_Move = 0 * Vector3.forward + 0 * Vector3.right;
+                m_Character.Move(m_Move, false, false);
+                return;
+            }
+
             // read inputs
             float h = Input.GetAxis("Horizontal");
             float v = Input.GetAxis("Vertical");
@@ -60,5 +75,13 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             m_Character.Move(m_Move, crouch, m_Jump);
             m_Jump = false;
         }
+
+
+        // Called from DeathEventHandler
+        public void Set_Dead()
+        {
+            dead = true;
+        }
+
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DeathEventManager : MonoBehaviour {
     public Image img;
+    public GameObject player;
     private Scene scene;
     private bool fading;
     private bool showImage;
@@ -44,6 +45,8 @@ public class DeathEventManager : MonoBehaviour {
     public void Player_Died()
     {
         playerAlive = false;
+        // long argument because of standard library namespace issue
+        player.GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonUserControl>().Set_Dead();
         Fade_Image(true, 1.5f);
     }
 
