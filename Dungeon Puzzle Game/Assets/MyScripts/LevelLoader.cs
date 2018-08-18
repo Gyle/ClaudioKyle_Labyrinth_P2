@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class LevelLoader : MonoBehaviour {
 
     public string nextLevelName;
+
 
     void OnTriggerEnter(Collider collidee)
     {
@@ -15,4 +17,6 @@ public class LevelLoader : MonoBehaviour {
             SceneManager.LoadScene(nextLevelName);
         }
     }
+
+   
 }

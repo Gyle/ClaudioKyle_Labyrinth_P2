@@ -79,8 +79,9 @@ public class EnemyController : MonoBehaviour {
 
     void OnTriggerEnter(Collider entity)
     {
-        Debug.Log("Triggered");
+
         if(entity.gameObject.name == "Player"){
+            Debug.Log("agro");
             agro = true;
         }
     }

@@ -120,11 +120,11 @@ public class DoorTrigger : MonoBehaviour {
 					
 					if(Physics.Raycast(ray, out mouse, 100.0f)){
 						if(mouse.transform != null){
-							print(mouse.transform.gameObject);
+							//print(mouse.transform.gameObject);
 							
 							// check if the user clicked on the switch they are close to
                             if(mouse.transform.gameObject == vicinitySwitch){
-                                print("player in vicinity");
+                                //print("player in vicinity");
 								correctInteraction = true;
 							}
 						}
