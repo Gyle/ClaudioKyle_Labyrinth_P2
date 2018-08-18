@@ -7972,6 +7972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   img: {fileID: 1129258954}
+  player: {fileID: 904990844}
 --- !u!4 &1450950574
 Transform:
   m_ObjectHideFlags: 0
