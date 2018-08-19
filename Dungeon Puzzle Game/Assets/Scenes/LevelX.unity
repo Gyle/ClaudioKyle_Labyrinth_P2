@@ -1263,6 +1263,11 @@ Prefab:
       propertyPath: activateTargets.Array.data[1]
       value: 
       objectReference: {fileID: 627989095}
+    - target: {fileID: 114820725499526350, guid: 84540d05466ef452ea30d17166f2b56a,
+        type: 2}
+      propertyPath: oneButton
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84540d05466ef452ea30d17166f2b56a, type: 2}
   m_IsPrefabAsset: 0
@@ -5384,6 +5389,11 @@ Prefab:
     - target: {fileID: 1865188479439074, guid: 840b91d73378b400c8dcca64ff05ebc3, type: 2}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114670876878667320, guid: 840b91d73378b400c8dcca64ff05ebc3,
+        type: 2}
+      propertyPath: oneButton
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 840b91d73378b400c8dcca64ff05ebc3, type: 2}
