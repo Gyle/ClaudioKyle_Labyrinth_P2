@@ -16,6 +16,7 @@ public class EnemyController : MonoBehaviour {
     private int index;          // current waypoint index
     private GameObject wp;      // current waypoint game object
     private bool agro;          // if true, it chases player
+    private bool fellOfMap;
 
 
     // Use this for initialization
@@ -24,12 +25,13 @@ public class EnemyController : MonoBehaviour {
         agro = false;
         wp = waypoints[index++];
         currentWaitTime = initialWaitTime;
+        fellOfMap = false;
     }
 
     // Update is called once per frame
     private void Update () {
-        // base case
-        if (moveOnEvent)
+        // base case. Do nothing if waiting for event or if agent fell off map
+        if (moveOnEvent || fellOfMap)
         {
             return;
         }
@@ -54,7 +56,6 @@ public class EnemyController : MonoBehaviour {
     }
 
     private void Patrol_Area(){
-        print("patrol time");
         // If it is time to move, move enemy
         if (currentWaitTime <= 0)
         {
@@ -69,7 +70,6 @@ public class EnemyController : MonoBehaviour {
             // check if enemy path dynamically changed to partial
             if (Path_Is_Partial("patrol"))
             {
-                print("path is partial. update to next valid waypoint");
                 // partial path, so move to next waypoint
                 currentWaitTime = initialWaitTime;
                 Update_Next_Waypoint();
@@ -114,4 +114,15 @@ public class EnemyController : MonoBehaviour {
         return path.status == NavMeshPathStatus.PathPartial;
     }
 
+    // useful for checking if agent has reached destination
+    private bool Has_Reached_Destination()
+    {
+        return agent.remainingDistance <= agent.stoppingDistance;
+    }
+
+    // update flag that enemy fell off map to disable Update() functionality to stop errors
+    public void Set_Fell_Off_Map()
+    {
+        fellOfMap = true;
+    }
 }

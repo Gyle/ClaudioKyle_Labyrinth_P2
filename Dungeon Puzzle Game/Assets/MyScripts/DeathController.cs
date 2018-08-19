@@ -14,6 +14,11 @@ public class DeathController : MonoBehaviour {
         {
             deathHandler.GetComponent<DeathEventManager>().Player_Died();
         }
+
+        if (entity.gameObject.tag == "PitFall")
+        {
+            deathHandler.GetComponent<DeathEventManager>().Player_Died();
+        }
     }
     
 }
