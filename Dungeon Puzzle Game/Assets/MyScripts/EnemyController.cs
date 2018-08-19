@@ -40,17 +40,14 @@ public class EnemyController : MonoBehaviour {
         // move to player's curent position
         agent.SetDestination(player.transform.position);
 
-        // compute path status
-        NavMeshPath path = new NavMeshPath();
-        agent.CalculatePath(player.transform.position, path);
-
         // use path status check if path is partial, meaning cannot reach destination
-        if (path.status == NavMeshPathStatus.PathPartial){
+        if (Path_Is_Partial()){
             agro = false; // turn off agro as cannot reach player
         }
     }
 
     void Patrol_Area(){
+        print("patrol time");
         // If it is time to move, move enemy
         if (currentWaitTime <= 0)
         {
@@ -59,13 +56,34 @@ public class EnemyController : MonoBehaviour {
             Update_Next_Waypoint();                         // update next waypoint
 
         }
-        // It is not time to move so decrement timer
+        // It is not time to move
         else
         {
-            currentWaitTime -= Time.deltaTime;
+            Debug.Log(Path_Is_Partial());
+            // check if enemy path dynamically changed to partial
+            if (Path_Is_Partial())
+            {
+                print("path is partial. update to next valid waypoint");
+                // partial path, so move to next non partial path waypoint
+                Set_To_Next_Valid_Waypoint();
+                currentWaitTime = initialWaitTime;
+                agent.SetDestination(wp.transform.position);
+            }
+            else
+            {
+                // decrement timer
+                currentWaitTime -= Time.deltaTime;
+            }
         }
     }
 
+
+    private void Set_To_Next_Valid_Waypoint(){
+        while(Path_Is_Partial())
+        {
+            Update_Next_Waypoint();
+        }
+    }
 
     void Update_Next_Waypoint()
     {
@@ -84,6 +102,17 @@ public class EnemyController : MonoBehaviour {
             Debug.Log("agro");
             agro = true;
         }
+    }
+
+    // returns if path is partial (not possible to reach destination)
+    private bool Path_Is_Partial(){
+        
+        // compute path status
+        NavMeshPath path = new NavMeshPath();
+        agent.CalculatePath(player.transform.position, path);
+
+        // if path is patrial, return true.
+        return path.status == NavMeshPathStatus.PathPartial;
     }
 
 }
