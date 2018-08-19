@@ -10548,6 +10548,60 @@ Transform:
   m_Father: {fileID: 784383655}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1901414768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 178082, guid: 6a07feca79d15f84d83a75c6432bd05c,
+    type: 2}
+  m_PrefabInternal: {fileID: 364394980}
+--- !u!114 &1901414770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1901414768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951b2301d4646f640850aee729c5d4ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 904990844}
+  type: 10
+  waypoint: {fileID: 0}
+  activateTargets:
+  - {fileID: 0}
+  distanceTrigger: 0
+  showOpenRange: 1
+  openRange: 2
+  showCloseRange: 0
+  closeRange: 0
+  swipeDistance: 0
+  movementSpeed: 100
+  HingeDistance: 87
+  swayBuffer: 2.4
+  openSounds:
+  - {fileID: 8300000, guid: c97382d03fadc944e88f395b2a9bd8fd, type: 3}
+  closeSounds:
+  - {fileID: 8300000, guid: 94350bc449dce204a810e5c4bbd1efef, type: 3}
+  triggerOpen: 0
+  triggerClose: 0
+  isOpen: 0
+--- !u!114 &1901414771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1901414768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79688b6614cde0a4c8ad5fa8bdb917ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useOpenRange: 1
+  UI: {fileID: 0}
+  UIText: {fileID: 0}
+  oneButton: 1
+  openButton: 1
+  closeButton: 2
 --- !u!1 &1902223587
 GameObject:
   m_ObjectHideFlags: 0
