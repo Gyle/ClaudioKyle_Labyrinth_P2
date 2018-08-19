@@ -9,7 +9,7 @@ public class LevelLoader : MonoBehaviour {
     public string nextLevelName;
 
 
-    void OnTriggerEnter(Collider collidee)
+    private void OnTriggerEnter(Collider collidee)
     {
         // if player reached goal, load next level
         if(collidee.gameObject.name == "Player")

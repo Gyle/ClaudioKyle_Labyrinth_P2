@@ -14,6 +14,8 @@ public class DoorTrigger : MonoBehaviour {
 	string useMessage = "Use ";
 	public string openButton = "v"; //choose a keycode we would like for opening the door
 	public string closeButton = "c";//choose a keycode we would like for closing the door
+
+    public GameObject[] enemyTriggers; // these enemies will move one trigged via door openning
 	
 	// This variable represents which switch they are in range of using
 	GameObject vicinitySwitch;
@@ -141,6 +143,9 @@ public class DoorTrigger : MonoBehaviour {
 							if (openState == 0) {
 								gameObject.GetComponent<Door>().triggerOpen = true;
 								openState = 1;
+
+                                // activate enemies that move on door trigger
+                                Wake_Enemies();
 							}
 							if (openState == 2) {
 								gameObject.GetComponent<Door>().triggerClose = true;
@@ -177,4 +182,17 @@ public class DoorTrigger : MonoBehaviour {
 
 		}
 	}
+
+    // stops enemy from waiting on the 'moveOnEvent' flag
+    private void Wake_Enemies()
+    {
+        for (int i = 0; i < enemyTriggers.Length; i++)
+        {
+            EnemyController enemy = enemyTriggers[i].GetComponent<EnemyController>();
+            if (enemy.moveOnEvent)
+            {
+                enemy.moveOnEvent = false;
+            }
+        }
+    }
 }

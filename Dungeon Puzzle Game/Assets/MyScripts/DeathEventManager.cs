@@ -50,6 +50,7 @@ public class DeathEventManager : MonoBehaviour {
         Fade_Image(true, 1.5f);
     }
 
+    // update the trasition value according to affect the image alpha correctly for fade effect
     private void Update_Transition()
     {
         if (showImage)
@@ -63,6 +64,7 @@ public class DeathEventManager : MonoBehaviour {
         }
     }
 
+    // Check to see if fading is over to reload the current scene
     private void Check_If_Done_Fading()
     {
         if (transition > 1 || transition < 0)
