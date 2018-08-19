@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour {
     private int index;          // current waypoint index
     private GameObject wp;      // current waypoint game object
     private bool agro;          // if true, it chases player
+    private bool moveOnEvent;   // if true, enemy is stationary until event door opens
 
     // Use this for initialization
     void Start () {
@@ -22,6 +23,7 @@ public class EnemyController : MonoBehaviour {
         agro = false;
         wp = waypoints[index++];
         currentWaitTime = initialWaitTime;
+        moveOnEvent = false;
     }
 	
 	// Update is called once per frame
@@ -61,7 +63,7 @@ public class EnemyController : MonoBehaviour {
         {
             Debug.Log(Path_Is_Partial());
             // check if enemy path dynamically changed to partial
-            if (Path_Is_Partial())
+            if (Path_Is_Partial() && moveOnEvent)
             {
                 print("path is partial. update to next valid waypoint");
                 // partial path, so move to next non partial path waypoint
