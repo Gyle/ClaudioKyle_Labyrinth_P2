@@ -140,6 +140,9 @@ public class DoorTrigger : MonoBehaviour {
                     if(correctInteraction || debugMode){
 						if (oneButton == true)
 						{
+                            // animate switch
+                            Animate_Switch();
+
 							if (openState == 0) {
 								gameObject.GetComponent<Door>().triggerOpen = true;
 								openState = 1;
@@ -194,5 +197,10 @@ public class DoorTrigger : MonoBehaviour {
                 enemy.moveOnEvent = false;
             }
         }
+    }
+
+    private void Animate_Switch(){
+        Animator animator = vicinitySwitch.GetComponent<Animator>();
+        animator.SetTrigger("Use");
     }
 }
