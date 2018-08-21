@@ -13,10 +13,16 @@ public class PitFallBehaviourApplier : MonoBehaviour {
             // get EnemyController to update flag the enemy fell off map
             EnemyController enemyController = collidee.gameObject.GetComponentInParent<EnemyController>();
 
+            // get animator to stop it
+            Animator animator = collidee.gameObject.GetComponentInParent<Animator>();
+
             // get required objects for applying gravity
             NavMeshAgent enemyAgent = collidee.GetComponentInParent<NavMeshAgent>();
             Rigidbody enemyRb = collidee.gameObject.GetComponentInParent<Rigidbody>();
-            
+
+            // turn off animation
+            animator.StopPlayback();
+
             // apply gravity to the victim enemy
             enemyAgent.enabled = false;
             enemyRb.isKinematic = false;

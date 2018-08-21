@@ -4723,6 +4723,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91d652779ec7140488b6b8e360497937, type: 2}
   m_IsPrefabAsset: 0
+--- !u!95 &732680480 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95590531141333846, guid: 2c431013f5c19492a84bef0055f7073e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1017896330}
 --- !u!1001 &732950148
 Prefab:
   m_ObjectHideFlags: 0
@@ -11194,6 +11199,16 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 904990844}
+    - target: {fileID: 114014192310014560, guid: 2c431013f5c19492a84bef0055f7073e,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 732680480}
+    - target: {fileID: 95590531141333846, guid: 2c431013f5c19492a84bef0055f7073e,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b947a87df0a6c470989d6d652bb14d5f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c431013f5c19492a84bef0055f7073e, type: 2}
   m_IsPrefabAsset: 0
@@ -14703,6 +14718,11 @@ NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 195936935258512450, guid: 2c431013f5c19492a84bef0055f7073e,
     type: 2}
   m_PrefabInternal: {fileID: 1579511502}
+--- !u!95 &1509408927 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95590531141333846, guid: 2c431013f5c19492a84bef0055f7073e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1579511502}
 --- !u!4 &1512188858 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 91d652779ec7140488b6b8e360497937,
@@ -15062,6 +15082,16 @@ Prefab:
       propertyPath: moveOnEvent
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 95590531141333846, guid: 2c431013f5c19492a84bef0055f7073e,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b947a87df0a6c470989d6d652bb14d5f, type: 2}
+    - target: {fileID: 114014192310014560, guid: 2c431013f5c19492a84bef0055f7073e,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1509408927}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c431013f5c19492a84bef0055f7073e, type: 2}
   m_IsPrefabAsset: 0
