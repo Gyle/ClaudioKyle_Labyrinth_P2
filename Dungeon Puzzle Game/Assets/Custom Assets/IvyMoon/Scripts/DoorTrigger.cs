@@ -200,7 +200,11 @@ public class DoorTrigger : MonoBehaviour {
     }
 
     private void Animate_Switch(){
-        Animator animator = vicinitySwitch.GetComponent<Animator>();
-        animator.SetTrigger("Use");
+        // only animate when not in debug mode
+        if (!debugMode)
+        {
+            Animator animator = vicinitySwitch.GetComponent<Animator>();
+            animator.SetTrigger("Use");
+        }
     }
 }
