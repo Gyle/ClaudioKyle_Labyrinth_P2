@@ -574,6 +574,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4821731315605834, guid: 167ca4d582bb8f745b1ef469fdbdf0e4,
     type: 2}
   m_PrefabInternal: {fileID: 1109000961}
+--- !u!95 &104703097 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95590531141333846, guid: 2c431013f5c19492a84bef0055f7073e,
+    type: 2}
+  m_PrefabInternal: {fileID: 491793144}
 --- !u!1001 &107428352
 Prefab:
   m_ObjectHideFlags: 0
@@ -3424,6 +3429,16 @@ Prefab:
       propertyPath: initialWaitTime
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 95590531141333846, guid: 2c431013f5c19492a84bef0055f7073e,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b947a87df0a6c470989d6d652bb14d5f, type: 2}
+    - target: {fileID: 114014192310014560, guid: 2c431013f5c19492a84bef0055f7073e,
+        type: 2}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 104703097}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c431013f5c19492a84bef0055f7073e, type: 2}
   m_IsPrefabAsset: 0
@@ -4088,7 +4103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27e9159461bf1f24991dafb67c47f7bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevelName: LevelX2
+  nextLevelName: LevelX2_levers
 --- !u!65 &595798775
 BoxCollider:
   m_ObjectHideFlags: 0

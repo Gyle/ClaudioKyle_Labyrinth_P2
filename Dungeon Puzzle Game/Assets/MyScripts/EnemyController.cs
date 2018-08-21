@@ -16,8 +16,8 @@ public class EnemyController : MonoBehaviour {
     private int index;          // current waypoint index
     private GameObject wp;      // current waypoint game object
     private bool agro;          // if true, it chases player
-    private bool fellOfMap;
-
+    private bool fellOfMap;     // bool for if enemy fell off map
+    public Animator animator;  // animator controller of the enemy
 
     // Use this for initialization
     private void Start () {
@@ -46,6 +46,9 @@ public class EnemyController : MonoBehaviour {
 	}
 
     private void Chase_Player(){
+        // update to constant walk animation
+        Update_Animation("move");
+
         // move to player's curent position
         agent.SetDestination(player.transform.position);
 
@@ -56,6 +59,16 @@ public class EnemyController : MonoBehaviour {
     }
 
     private void Patrol_Area(){
+        // determine if enemy animates walk or idle
+        if(!Has_Reached_Destination()){
+            Update_Animation("move");
+   
+        }
+        else{
+            Update_Animation("idle");
+        }
+
+
         // If it is time to move, move enemy
         if (currentWaitTime <= 0)
         {
@@ -119,6 +132,22 @@ public class EnemyController : MonoBehaviour {
     {
         return agent.remainingDistance <= agent.stoppingDistance;
     }
+
+
+    // set animation for troll
+    private void Update_Animation(string type){
+        if(type == "attack"){
+            animator.SetTrigger("attack");
+        }
+        if(type == "move"){
+            animator.SetBool("walk", true);
+        }
+        if(type == "idle"){
+            animator.SetBool("walk", false);
+        }
+        
+    }
+
 
     // update flag that enemy fell off map to disable Update() functionality to stop errors
     public void Set_Fell_Off_Map()

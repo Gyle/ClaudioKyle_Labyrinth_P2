@@ -12,6 +12,10 @@ public class DeathController : MonoBehaviour {
     {
         if (entity.gameObject.tag == "Enemy")
         {
+            // make troll animate hitting player
+            Animator animator = entity.GetComponentInParent<Animator>();
+            animator.SetTrigger("attack");
+
             deathHandler.GetComponent<DeathEventManager>().Player_Died();
         }
 
