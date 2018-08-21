@@ -1310,7 +1310,7 @@ Prefab:
         type: 2}
       propertyPath: openSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: b9a680fa3148d49b3af76dcb24700fd8, type: 3}
+      objectReference: {fileID: 8300000, guid: cfaa63155881c4ab48f3a9daf00a2ce2, type: 3}
     - target: {fileID: 114153827013993496, guid: 84540d05466ef452ea30d17166f2b56a,
         type: 2}
       propertyPath: closeSounds.Array.data[0]
@@ -1641,7 +1641,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 77851dd64c3d4473b84a8ea217ccea12, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.355
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1789,7 +1789,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ca555cd107ecb4eb5b3c27b65f140688, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.355
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1884,7 +1884,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 12b178bc1113444a688bd48316617f67, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.355
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4819,6 +4819,16 @@ Prefab:
       propertyPath: oneButton
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114452979389355760, guid: 167ca4d582bb8f745b1ef469fdbdf0e4,
+        type: 2}
+      propertyPath: openSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cfaa63155881c4ab48f3a9daf00a2ce2, type: 3}
+    - target: {fileID: 114452979389355760, guid: 167ca4d582bb8f745b1ef469fdbdf0e4,
+        type: 2}
+      propertyPath: closeSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 37f5932a3dd054d7aa40b26d1807c5f7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 167ca4d582bb8f745b1ef469fdbdf0e4, type: 2}
   m_IsPrefabAsset: 0
@@ -10918,6 +10928,16 @@ Prefab:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 114452979389355760, guid: 167ca4d582bb8f745b1ef469fdbdf0e4,
+        type: 2}
+      propertyPath: openSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cfaa63155881c4ab48f3a9daf00a2ce2, type: 3}
+    - target: {fileID: 114452979389355760, guid: 167ca4d582bb8f745b1ef469fdbdf0e4,
+        type: 2}
+      propertyPath: closeSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 37f5932a3dd054d7aa40b26d1807c5f7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 167ca4d582bb8f745b1ef469fdbdf0e4, type: 2}
   m_IsPrefabAsset: 0
@@ -11240,6 +11260,16 @@ Prefab:
       propertyPath: m_Name
       value: Door08
       objectReference: {fileID: 0}
+    - target: {fileID: 114153827013993496, guid: 84540d05466ef452ea30d17166f2b56a,
+        type: 2}
+      propertyPath: openSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cfaa63155881c4ab48f3a9daf00a2ce2, type: 3}
+    - target: {fileID: 114153827013993496, guid: 84540d05466ef452ea30d17166f2b56a,
+        type: 2}
+      propertyPath: closeSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 37f5932a3dd054d7aa40b26d1807c5f7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84540d05466ef452ea30d17166f2b56a, type: 2}
   m_IsPrefabAsset: 0
@@ -11563,7 +11593,7 @@ Prefab:
         type: 2}
       propertyPath: openSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: b9a680fa3148d49b3af76dcb24700fd8, type: 3}
+      objectReference: {fileID: 8300000, guid: cfaa63155881c4ab48f3a9daf00a2ce2, type: 3}
     - target: {fileID: 114452979389355760, guid: 167ca4d582bb8f745b1ef469fdbdf0e4,
         type: 2}
       propertyPath: closeSounds.Array.data[0]
@@ -11573,7 +11603,7 @@ Prefab:
         type: 2}
       propertyPath: openSounds.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 37f5932a3dd054d7aa40b26d1807c5f7, type: 3}
+      objectReference: {fileID: 8300000, guid: cfaa63155881c4ab48f3a9daf00a2ce2, type: 3}
     - target: {fileID: 114452979389355760, guid: 167ca4d582bb8f745b1ef469fdbdf0e4,
         type: 2}
       propertyPath: openSounds.Array.data[2]
@@ -12914,6 +12944,16 @@ Prefab:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 114452979389355760, guid: 167ca4d582bb8f745b1ef469fdbdf0e4,
+        type: 2}
+      propertyPath: openSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cfaa63155881c4ab48f3a9daf00a2ce2, type: 3}
+    - target: {fileID: 114452979389355760, guid: 167ca4d582bb8f745b1ef469fdbdf0e4,
+        type: 2}
+      propertyPath: closeSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 37f5932a3dd054d7aa40b26d1807c5f7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 167ca4d582bb8f745b1ef469fdbdf0e4, type: 2}
   m_IsPrefabAsset: 0
@@ -14640,6 +14680,16 @@ Prefab:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 114452979389355760, guid: 167ca4d582bb8f745b1ef469fdbdf0e4,
+        type: 2}
+      propertyPath: openSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cfaa63155881c4ab48f3a9daf00a2ce2, type: 3}
+    - target: {fileID: 114452979389355760, guid: 167ca4d582bb8f745b1ef469fdbdf0e4,
+        type: 2}
+      propertyPath: closeSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 37f5932a3dd054d7aa40b26d1807c5f7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 167ca4d582bb8f745b1ef469fdbdf0e4, type: 2}
   m_IsPrefabAsset: 0
@@ -16177,6 +16227,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 82000483661446308, guid: c0d97b88daa884b2583dfea9780a0884,
+        type: 2}
+      propertyPath: Priority
+      value: 107
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d97b88daa884b2583dfea9780a0884, type: 2}
   m_IsPrefabAsset: 0
@@ -16473,9 +16528,9 @@ MonoBehaviour:
   HingeDistance: 87
   swayBuffer: 2.4
   openSounds:
-  - {fileID: 8300000, guid: c97382d03fadc944e88f395b2a9bd8fd, type: 3}
+  - {fileID: 8300000, guid: cfaa63155881c4ab48f3a9daf00a2ce2, type: 3}
   closeSounds:
-  - {fileID: 8300000, guid: 94350bc449dce204a810e5c4bbd1efef, type: 3}
+  - {fileID: 8300000, guid: 37f5932a3dd054d7aa40b26d1807c5f7, type: 3}
   triggerOpen: 0
   triggerClose: 0
   isOpen: 0
@@ -17250,6 +17305,16 @@ Prefab:
       propertyPath: waypoint
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114153827013993496, guid: 84540d05466ef452ea30d17166f2b56a,
+        type: 2}
+      propertyPath: openSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cfaa63155881c4ab48f3a9daf00a2ce2, type: 3}
+    - target: {fileID: 114153827013993496, guid: 84540d05466ef452ea30d17166f2b56a,
+        type: 2}
+      propertyPath: closeSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 37f5932a3dd054d7aa40b26d1807c5f7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84540d05466ef452ea30d17166f2b56a, type: 2}
   m_IsPrefabAsset: 0
@@ -17351,6 +17416,16 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000483661446308, guid: c0d97b88daa884b2583dfea9780a0884,
+        type: 2}
+      propertyPath: BypassEffects
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000483661446308, guid: c0d97b88daa884b2583dfea9780a0884,
+        type: 2}
+      propertyPath: Priority
+      value: 132
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d97b88daa884b2583dfea9780a0884, type: 2}
@@ -17696,6 +17771,16 @@ Prefab:
       propertyPath: enemyTriggers.Array.data[0]
       value: 
       objectReference: {fileID: 1509408921}
+    - target: {fileID: 114452979389355760, guid: 167ca4d582bb8f745b1ef469fdbdf0e4,
+        type: 2}
+      propertyPath: openSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cfaa63155881c4ab48f3a9daf00a2ce2, type: 3}
+    - target: {fileID: 114452979389355760, guid: 167ca4d582bb8f745b1ef469fdbdf0e4,
+        type: 2}
+      propertyPath: closeSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 37f5932a3dd054d7aa40b26d1807c5f7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 167ca4d582bb8f745b1ef469fdbdf0e4, type: 2}
   m_IsPrefabAsset: 0
