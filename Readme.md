@@ -11,9 +11,19 @@ To show:
 
 **Please check our milestones, issues, and project boards! We have a design and development kanban board.**
 
+## Running the Unity 3D Project
+Once pulling this repository, open the "Dungeon Puzzle Game" folder. Then, to play the game, open the LevelX scene and press play. You 
+will notice that loading the next level through reaching the goal makes LevelX2_levers dark. This is because Unity 3D editor does not 
+render scene properly upon loading scene via scene manager. There are also Windows and Max executables to play the game.
+
+## How to Play the Game
+**You the blue man.**
+* Movement: WASD.
+* Opening Door: Left Click on switch while standing next to switch.
+* Goal: Avoid enemies while figuring out the switch/door combination to open and navigate to the master (goal) door.
 
 ## Debugging
-Currently Right click is Debug Mode. In this mode, left click opens and closes all doors. The purpose of the mode is to quick test enemy interation and enemy nav mesh. In addition to testing for other features without needing to traverse the whole scene properly as that takes time.
+**Currently Right click is Debug Mode**. In this mode, left clicking anywhere opens and closes all doors. The purpose of the mode is to quick test enemy interation and enemy nav mesh. In addition to testing for other features without needing to traverse the whole scene properly as that takes time.
 
 ## Architecture of the Game
 I will only mention commits for libraries I modified and what I found to be the most challenging and interesting part of the prototype. This is because there is too many commits to reference for my code.
@@ -73,3 +83,8 @@ mesh when releasing the trap door. Finding out that I needed to disable the nav 
 value to false, **AND** having to apply the GravityWeight propery to all animations was very interesting, **BUT** difficult nonetheless.
 See commit `47447c36b428eebddec0311c7cc337ee733951a5`
 
+### Unity Store Assets Used
+Other than the libraries above, here is the list of other Unity Store assets we've used.
+* **Walls, floor, door, torch, pillar, stairs**: Decrepit Dungeon LITE
+* **PlaceHolder Enemy**: LowMan
+* **Player Model**: StudioNewPunch
