@@ -40,7 +40,7 @@ LevelLoader.cs which checks if the player collides with the stairs trigger box c
 scene.
 
 
-### Library Used
+### Libraries Used
 ##### IvyMoon's Door Script
 This script initially was made for first person perspective games to open doors. It would display GUI text regarding which button to
 push to open or close. There was only a one to one relationship, meaning one door to one switch. Modifying this script was my first time coding in Unity3D and C#. Here are my modifications with corresponding `commit id`:
@@ -59,3 +59,11 @@ stop the player from moving when they have died `6e8b70b8f0ab5eb54df54fd1727fb9d
 ##### Unity Nav Mesh
 I utilised Unity's script to make our enemy move. It intelligently path finds and knows when doors is closed or if the 
 trap door is open, indicating it cannoy cross the gap. All done with use of Nav Mesh Obstacle.
+
+### Most Challenging and Interesting Part of the Prototype
+Overall the most challenging part was using Unity 3D to link the game objects with scripts in the scene. All this GUI stuff 
+was hard to work out in the early stages of development. In particular, see commit `ed98e514cb23233a415501bb153bc46109b16847`. 
+Moreover, the challenge of solving why the dang enemy would not fall by gravity into my trap door mechanic despite carving out the nav 
+mesh when releasing the trap door. Finding out that I needed to disable the nav mesh agent and set rigidbody's kinematic 
+value to false, **AND** having to apply the GravityWeight propery to all animations was very interesting, **BUT** difficult nonetheless.
+
