@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/*
+ This class handles the movement and attacks of the enemy. The enemy has two mode of patrol or agro. If the enemy 
+ touches the player, it stop patrolling and enter agro mode. It will de-agro once the path the player is partial.
+*/
 public class EnemyController : MonoBehaviour {
 
-    
     public GameObject[] waypoints;      // patrol waypoints for enemy
     public NavMeshAgent agent;  // This object controls the movement
     public GameObject player;           // Player reference for chasing

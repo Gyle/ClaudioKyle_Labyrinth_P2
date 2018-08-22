@@ -4,7 +4,8 @@ using UnityEngine;
 
 /*
  Script is attached to player. The player notifies DeathEventManager.cs when they die to signal
- the handler it is time to do the restart level sequence
+ the handler it is time to do the restart level sequence. Conditions of dying are touching the 
+ enemy or falling into the pit.
 */
 public class DeathController : MonoBehaviour {
 
