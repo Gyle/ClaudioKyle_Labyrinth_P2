@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/*
+ This script is attached to trap doors. A trap door will have a box collider and a nav mesh obstacle 
+ for carving out the nav mesh, depending on position. When trap door is released, both 
+ box collider and nav mesh obstacle move down to squish the enemy with a trigger box. If the enemy
+ touches this trigger, apply physics to the enemy by disabling nav mesh and applying rigid body attributes.
+*/
 public class PitFallBehaviourApplier : MonoBehaviour {
 
     private void OnTriggerEnter(Collider collidee)

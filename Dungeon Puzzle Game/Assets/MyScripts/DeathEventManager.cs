@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+/*
+ This script is attached to a stand alone game object. The role of this script is to 
+ handle the death effects of notifying ThirdPersonUserControl.js that player cannot 
+ move once dead. Also, create fade effect indicating to player they died. Finally, 
+ it reloads current scene to restart level
+*/
 public class DeathEventManager : MonoBehaviour {
-    public Image img;
-    public GameObject player;
-    private Scene scene;
-    private bool fading;
-    private bool showImage;
-    private bool playerAlive;
-    private float transition;
-    private float fadeDuration;
+    public Image img;           // white image that creates fade effect by increase alpha and transition to black color
+    public GameObject player;   // reference to player to notify ThirdPersonUserControl.js they died
+    private Scene scene;        // current scene
+    private bool fading;        // if the scene in the middle of fading image
+    private bool showImage;     // if the image is on screen
+    private bool playerAlive;   // if the player died to determine when to restart level
+    private float transition;   // alpha value
+    private float fadeDuration; // how long fade takes until fully faded
    
 
     // Use this for initialization

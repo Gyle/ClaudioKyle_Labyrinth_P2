@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+/*
+ Script is attached to player. The player notifies DeathEventManager.cs when they die to signal
+ the handler it is time to do the restart level sequence
+*/
 public class DeathController : MonoBehaviour {
 
-    public GameObject deathHandler;
+    public GameObject deathHandler; // reference to the death handler game object which is invisble and handles death sequence
 
     // notify the DeathEventHandler class that the player died, so we much restart level
     private void OnTriggerEnter(Collider entity)
