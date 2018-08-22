@@ -1,7 +1,7 @@
 # 18.2 COMP313 Assignment 2
 ## Student: Kyle Claudio, Lucas Gosling
 
-## Burndown Chart
+## Project Management
 http://radekstepan.com/burnchart/#!/
 
 To show: 
@@ -9,10 +9,15 @@ To show:
 2) Select add project on top left
 3) enter path. EG: Gyle/COMP313_Unity_Game
 
+**Please check our milestones, issues, and project boards! We have a design and development kanban board.**
+
+
 ## Debugging
 Currently Right click is Debug Mode. In this mode, left click opens and closes all doors. The purpose of the mode is to quick test enemy interation and enemy nav mesh. In addition to testing for other features without needing to traverse the whole scene properly as that takes time.
 
 ## Architecture of the Game
+I will only mention commits for libraries I modified and what I found to be the most challenging and interesting part of the prototype. This is because there is too many commits to reference for my code.
+
 ### Kyle's Coding Report
 Other than modifcations to library scripts, I have created scripts for handling enemy actions, dying, and pit fall event.
 
@@ -66,4 +71,5 @@ was hard to work out in the early stages of development. In particular, see comm
 Moreover, the challenge of solving why the dang enemy would not fall by gravity into my trap door mechanic despite carving out the nav 
 mesh when releasing the trap door. Finding out that I needed to disable the nav mesh agent and set rigidbody's kinematic 
 value to false, **AND** having to apply the GravityWeight propery to all animations was very interesting, **BUT** difficult nonetheless.
+See commit `47447c36b428eebddec0311c7cc337ee733951a5`
 
