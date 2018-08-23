@@ -11,6 +11,9 @@ To show:
 
 **Please check our milestones, issues, and project boards! We have a design and development kanban board.**
 
+## Documentation Video
+https://www.youtube.com/watch?v=9n8XMKcCVKg
+
 ## Running the Executables
 There are three additional branches on this repository, but two are used for storing the Windows and Mac executable. To play the **Windows** executable, go to the `windows_exe` branch, download the branch, and extract the Unity exe file from Labyrinth_Windows_Build.zip. To play the **Mac** executable, go to the `mac_exe` branch, download the branch, and extract the Unity app file from Labyrinth_Mac_Build.zip.
 
