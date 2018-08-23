@@ -7,9 +7,12 @@ http://radekstepan.com/burnchart/#!/
 To show: 
 1) Log into GitHub and put in the path to this Repo.
 2) Select add project on top left
-3) enter path. EG: Gyle/COMP313_Unity_Game
+3) enter path. EG: Gyle/ClaudioKyle_Labyrinth_P2
 
 **Please check our milestones, issues, and project boards! We have a design and development kanban board.**
+
+## Running the Executables
+There are three additional branches on this repository, but two are used for storing the Windows and Mac executable. To play the **Windows** executable, go to the `windows_exe` branch, download the branch, and extract the Unity exe file from Labyrinth_Windows_Build.zip. To play the **Mac** executable, go to the `mac_exe` branch, download the branch, and extract the Unity app file from Labyrinth_Mac_Build.zip.
 
 ## Running the Unity 3D Project
 Once pulling this repository, open the "Dungeon Puzzle Game" folder. Then, to play the game, open the LevelX scene and press play. You 
